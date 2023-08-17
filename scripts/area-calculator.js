@@ -33,6 +33,12 @@ function calculateRectangleArea() {
     const length = parseFloat(lengthValueText);
     console.log(length);
 
+    // validate input: width and length
+    if (isNaN(width) || isNaN(length)) {
+        alert('Please insert a number');
+        return;
+    }
+
     // calculate Area 
     const area = width * length;
 
@@ -51,10 +57,12 @@ function calculateEllipseArea() {
 // reusable function --> reduce duplicate code
 function calculateParallelogramArea() {
     const base = getInputValue('parallelogram-base');
-    // console.log(base);
     const height = getInputValue('parallelogram-height');
-    // console.log(height);
-
+    // validate input: width and length
+    if (isNaN(base) || isNaN(height)) {
+        alert('Please insert a number');
+        return;
+    }
     const area = base * height;
     setElementInnerText('parallelogram-area', area);
 }
@@ -71,3 +79,10 @@ function setElementInnerText(elementId, area) {
     const element = document.getElementById(elementId);
     element.innerText = area;
 }
+
+// Data validation
+/**
+ * 1. set the type of the input field. (number, data, email);
+ * 2. check the type using typeof
+ * 3. isNaN NaN means : Not a Number. is NaN is checking whether  the input is nota a number or not
+ */
