@@ -23,9 +23,20 @@
                     <figure><img src="./images/triangle.png" alt="Shoes" /></figure>
                     <div class="card-body">
                         <h2 class="card-title">Triangle</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
+                        <p>Area (A) = 0.5 X b X h</p>
+                        <p>
+                            <!-- Base -->
+                            <input type="text" class="border w-24 px-2 bg-gray-200" placeholder="Base" name=""
+                                id="triangle-base">
+                            <span class="ml-2">cm</span>
+                            <!-- Height -->
+                            <input type="text" class="border w-24 ml-4 px-2 bg-gray-200" placeholder="Height" name=""
+                                id="triangle-height">
+                            <span class="ml-2">cm</span>
+                        </p>
+                        <p>Area: <span></span></p>
+                        <div class="card-actions ">
+                            <button onclick="calculateTriangleArea()" class="btn btn-primary w-full">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -58,6 +69,7 @@
             </div>
         </div>
     </main>
+    <script src="./scripts/area-calculator.js"></script>
 </body>
 
 </html>
