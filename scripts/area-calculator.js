@@ -40,6 +40,13 @@ function calculateRectangleArea() {
     const rectangleAreaSpan = document.getElementById('rectangle-area');
     rectangleAreaSpan.innerText = area;
 }
+// Ellipse Area
+function calculateEllipseArea() {
+    const majorRadius = getInputValue('ellipse-Major-radius');
+    const minorRadius = getInputValue('ellipse-minor-radius');
+    const area = (Math.PI * majorRadius * minorRadius).toFixed(2);
+    setElementInnerText('ellipse-area', area);
+}
 
 // reusable function --> reduce duplicate code
 function calculateParallelogramArea() {
