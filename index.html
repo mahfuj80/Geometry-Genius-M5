@@ -19,8 +19,8 @@
             <!-- shape container -->
             <div class="flex-1 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-4">
                 <!-- Triangle card -->
-                <div class="card bg-base-100 shadow-xl">
-                    <figure><img src="./images/triangle.png" alt="Shoes" /></figure>
+                <div class="card bg-base-100 shadow-xl pt-4">
+                    <figure class="mt-5"><img src="./images/triangle.png" alt="Shoes" /></figure>
                     <div class="card-body">
                         <h2 class="card-title">Triangle</h2>
                         <p>Area (A) = 0.5 X b X h</p>
@@ -43,8 +43,8 @@
                     </div>
                 </div>
                 <!-- Rectangle card -->
-                <div class="card bg-base-100 shadow-xl">
-                    <figure><img src="./images/rectangle.png" alt="Shoes" /></figure>
+                <div class="card bg-base-100 shadow-xl pt-4">
+                    <figure class="mt-5"><img src="./images/rectangle.png" alt="Shoes" /></figure>
                     <div class="card-body">
                         <h2 class="card-title">Rectangle</h2>
                         <p>Area (A) = w X l</p>
@@ -68,8 +68,8 @@
                 </div>
 
                 <!-- Parallelogram card -->
-                <div class="card bg-base-100 shadow-xl">
-                    <figure><img src="./images/parallelogram.png" alt="Shoes" /></figure>
+                <div class="card bg-base-100 shadow-xl pt-4">
+                    <figure class="mt-5"><img src="./images/parallelogram.png" alt="Shoes" /></figure>
                     <div class="card-body">
                         <h2 class="card-title">Parallelogram</h2>
                         <p>Area (A) = b X h</p>
@@ -92,8 +92,34 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Rhombus card -->
+                <div class="card bg-base-100 shadow-xl pt-4">
+                    <figure><img src="./images/rhombus.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Rhombus</h2>
+                        <p>Area (A) = 0.5 X d <sub>1</sub> X d <sub>2</sub></p>
+                        <p>
+                            <!-- ellipse Major-radius -->
+                            <input type="text" class="border w-24 px-2 bg-gray-200" placeholder="Diagonal-1" name=""
+                                id="rhombus-diagonal-one">
+                            <span class="ml-2">cm</span>
+                            <!-- ellipse minor-radius -->
+                            <input type="text" class="border w-24 ml-4 px-2 bg-gray-200" placeholder="Diagonal-2"
+                                name="" id="rhombus-diagonal-two">
+                            <span class="ml-2">cm</span>
+                        </p>
+                        <!-- ellipse Area -->
+                        <p class="text-2xl">Area: <span class="font-bold" id="rhombus-area">0</span><span>cm
+                                <sup>2</sup> </span></p>
+                        <div class="card-actions ">
+                            <button onclick="calculateRhombusArea()" class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- ellipse card -->
-                <div class="card bg-base-100 shadow-xl">
+                <div class="card bg-base-100 shadow-xl pt-4">
                     <figure><img src="./images/ellipse.png" alt="Shoes" /></figure>
                     <div class="card-body">
                         <h2 class="card-title">ellipse</h2>
@@ -116,32 +142,9 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- ellipse card -->
-                <div class="card bg-base-100 shadow-xl">
-                    <figure><img src="./images/ellipse.png" alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title">ellipse</h2>
-                        <p>Area (A) = πab</p>
-                        <p>
-                            <!-- ellipse Major-radius -->
-                            <input type="text" class="border w-24 px-2 bg-gray-200" placeholder="Large" name=""
-                                id="ellipse-Major-radius">
-                            <span class="ml-2">cm</span>
-                            <!-- ellipse minor-radius -->
-                            <input type="text" class="border w-24 ml-4 px-2 bg-gray-200" placeholder="Short" name=""
-                                id="ellipse-minor-radius">
-                            <span class="ml-2">cm</span>
-                        </p>
-                        <!-- ellipse Area -->
-                        <p class="text-2xl">Area: <span class="font-bold" id="ellipse-area">0</span><span>cm
-                                <sup>2</sup> </span></p>
-                        <div class="card-actions ">
-                            <button onclick="calculateEllipseArea()" class="btn btn-primary w-full">Calculate</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- ellipse card -->
-                <div class="card bg-base-100 shadow-xl">
+                <div class="card bg-base-100 shadow-xl pt-4">
                     <figure><img src="./images/ellipse.png" alt="Shoes" /></figure>
                     <div class="card-body">
                         <h2 class="card-title">ellipse</h2>
