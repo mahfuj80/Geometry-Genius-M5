@@ -103,12 +103,28 @@ function calculateEllipseArea() {
 
     addToCalculationEntry('Ellipse', area);
 }
+// Calculate Pentagon Area
+function calculatePentagonArea() {
+    const pentagonPerimeter = getInputValue('perimeter');
+    const pentagonApothem = getInputValue('apothem');
+
+    // validate input: 
+    if (isNaN(pentagonPerimeter) || isNaN(pentagonApothem)) {
+        alert('Please insert a number');
+        return;
+    }
+    const area = (0.5 * pentagonPerimeter * pentagonApothem).toFixed(2);
+    setElementInnerText('pentagon-area', area);
+
+    addToCalculationEntry('Pentagon', area);
+}
 
 // reusable function --> reduce duplicate code
 function getInputValue(fieldId) {
     const inputField = document.getElementById(fieldId);
     const inputValueText = inputField.value;
     const value = parseFloat(inputValueText);
+    inputField.value = '';
     return value;
 }
 
